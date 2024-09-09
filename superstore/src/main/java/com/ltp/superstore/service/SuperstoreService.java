@@ -37,17 +37,17 @@ public class SuperstoreService {
 
     public Item getItemById(String id) {
         int index = getItemIndex(id);
-        return index == Constants.NOT_FOUND ? new Item() : getItem(index); // update mesw id me
-                                                                           // if
+        return index == Constants.NOT_FOUND ? new Item() : getItem(index); 
+                                                                           
     }
 
     public void submitItem(Item item) {
         int index = getItemIndex(item.getId());
-        if (index == Constants.NOT_FOUND) { // *mono kata ti xrisi tou update, otan den yparxei idi to item tote to
-                                            // kanoume submit
+        if (index == Constants.NOT_FOUND) { 
+                                            
             addItem(item);
         } else {
-            updateItem(index, item); // alliws an den yparxei idi, edw kanoume to update
+            updateItem(index, item); 
         }
 
     }
