@@ -10,8 +10,8 @@ public class Item {
     private String name;
     private Double price;
     private Double discount;
-    @DateTimeFormat(pattern = "yyyy-MM-dd") // to kanoume auto wste na mporei na perasei to date tis formas pou einai
-                                            // String type sto date tou item pou einai DATE type.
+    @DateTimeFormat(pattern = "yyyy-MM-dd") 
+                                            
     private Date date;
     private String id;  
 
