@@ -33,19 +33,19 @@
             <td th:text="${item.name}"></td>
             <td th:text="${#numbers.formatCurrency(item.price)}"></td>
             <td th:text="${#numbers.formatCurrency(item.discount)}"></td>
-            <!--Xrisi tou thymeleaf utility method gia currency apo etoimes sto internet me xrisi #prwta-->
+            
 
             <td th:text="${#dates.format(item.date, 'yyyy-MM-dd')}"></td>
-            <!--Xrisi tou thymeleaf utility method apo etoimes sto internet me xrisi #prwta-->
+           
 
             <td>
                <div><a role="button"  style="color:white; background-color: #cd8706" class="table-button"
                      th:href="@{/(id=${item.id})}">Update</a>
-                  <!--Dimiourgia Update button opou pername mesa ton syndesmo update/ kai to parameter id-->
+                
                </div>
                <div> <a role="button"  style="color:white; background-color: #7b0b0b" class="table-button"
                      th:href="@{/delete(id=${item.id})}">Delete</a>
-                  <!--Dimiourgia Delete button opou pername mesa ton syndesmo delete/ kai to parameter id-->
+                  
                </div>
             </td>
          </tr>
