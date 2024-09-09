@@ -12,7 +12,7 @@
     <div class="container">
         <h2> Global Superstore </h2>
         <form method="post" th:object="${item}" th:action="@{/submitItem}">
-            <!--eisagoume to object item kai epeita vazoume kai to action pou einai post request apo to Controller-->
+            
             <select class="select" th:field="*{category}">
                 <option style="color:blue" value="">Choose Category</option>
                 <option th:each="category: ${categories}" th:text="${category}" th:value="${category}"> </option>
@@ -24,7 +24,7 @@
             <h4>Order Date</h4>
             <input type="date" style="color:black" th:field="*{date}">
             <input type="hidden" th:field="*{id}">
-            <!-- Gia na doulepsei to id prepei na valoume kai ena hidden id field edw wste na ginei bound me to item object kai na ginei kai post tou id mesw tis formas-->
+            
 
             <input type="submit" value="Submit Item">
         </form>
