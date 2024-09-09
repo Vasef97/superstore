@@ -21,13 +21,13 @@ public class SuperstoreController {
     @GetMapping("/") // get formas ston syndesmo /
     public String getForm(Model model, @RequestParam(required = false) String id) {
         model.addAttribute("item", superstoreService.getItemById(id));
-        model.addAttribute("categories", Constants.CATEGORIES); // eisagwgi katigoriwn apo to Constants.java
+        model.addAttribute("categories", Constants.CATEGORIES); 
         return "form";
     }
 
     @PostMapping("/submitItem") // Post request stin forma kai eisagwgi tou neou item sto ArrayList mas
-    public String handleSubmit(Item item, RedirectAttributes redirectAttributes) { // dexetai to item object apo tin
-                                                                                   // forma
+    public String handleSubmit(Item item, RedirectAttributes redirectAttributes) { 
+                                                                                   
         superstoreService.submitItem(item);
         redirectAttributes.addFlashAttribute("status", Constants.SUCCESS_STATUS);
         return "redirect:/inventory";
